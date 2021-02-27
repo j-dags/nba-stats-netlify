@@ -8,16 +8,23 @@ export async function handler(event, context) {
 			'https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2020-21&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=0&TwoWay=0&VsConference=&VsDivision=&Weight=',
 			{
 				headers: {
+					// Connection: 'keep-alive',
+					// 'User-Agent':
+					// 	'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
+					// 'x-nba-stats-origin': 'stats',
+					// Referer: 'https://stats.nba.com/',
+					// accept: '*/*',
+					// 'accept-language': 'en-US,en;q=0.9',
+					Host: 'stats.nba.com',
 					Connection: 'keep-alive',
+					Accept: 'application/json, text/plain, */*',
 					'User-Agent':
-						'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
-					'x-nba-stats-origin': 'stats',
+						'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
 					Referer: 'https://stats.nba.com/',
-					accept: '*/*',
-					'accept-language': 'en-US,en;q=0.9',
-					// "sec-fetch-dest": "empty",
-					// "sec-fetch-mode": "cors",
-					// "sec-fetch-site": "same-site"
+					'x-nba-stats-origin': 'stats',
+					'x-nba-stats-token': 'true',
+					'Accept-Encoding': 'gzip, deflate, br',
+					'Accept-Language': 'en-US,en;q=0.9',
 				},
 			}
 		);
